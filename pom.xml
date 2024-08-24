@@ -1,6 +1,6 @@
 <project>
 
-  <groupId>com.revature.Mehrab</groupId>
+  <groupId>com.revature</groupId>
   <artifactId>SQLPractice</artifactId>
   <version>1.0-SNAPSHOT</version>
   <modelVersion>4.0.0</modelVersion>
@@ -24,7 +24,7 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
         <configuration>
-          <mainClass>com.revature.Mehrab.App</mainClass>
+          <mainClass>com.revature.Server</mainClass>
         </configuration>
       </plugin>
     </plugins>

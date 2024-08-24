@@ -1,4 +1,4 @@
-package com.revature.Mehrab;
+package com.revature;
 
 import java.sql.*;
 import java.util.Scanner;
@@ -28,20 +28,15 @@ public class App {
                 query += scanner.nextLine();
             }
 
-            try {
-                boolean isResultSet = statement.execute(query);
-                if (isResultSet) {
-                    ResultSet resultSet = statement.getResultSet();
-                    for (int i = 1; i <= resultSet.getMetaData().getColumnCount(); i++) {
-                        System.out.printf("%-15s", resultSet.getString(i));
-                    }
-                    System.out.println();
-                } else {
-                    int linesUpdated = statement.getUpdateCount();
-                    System.out.println(linesUpdated + ((linesUpdated == 1) ? " row" : " rows") + " updated.");
-                }
-            } catch (SQLException e) {
-                System.err.println(e.getMessage());
+            
+            boolean isResultSet = statement.execute(query);
+            if (isResultSet) {
+                ResultSet rs = statement.getResultSet();
+                ResultSetPrinter.printResultSet(rs);
+                System.out.println();
+            } else {
+                int linesUpdated = statement.getUpdateCount();
+                System.out.println(linesUpdated + ((linesUpdated == 1) ? " row" : " rows") + " updated.");
             }
         }
         scanner.close();
