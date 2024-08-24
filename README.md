@@ -1,1 +1,1 @@
-# Cohort's First Project to have each individual server to correspond with each other remotely
+# Cohort's First Project: To have each individual server to correspond with each other remotely
