@@ -1,1 +1,1 @@
-# SQLPractice
+# Cohort's First Project to have each individual server to correspond with each other remotely
